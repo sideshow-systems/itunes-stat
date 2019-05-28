@@ -1,2 +1,2 @@
-# itunes-stat
-iTunes Statistic Elektron App
+# iTunes-Stat
+iTunes Statistic Electron App
