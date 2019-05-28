@@ -1,0 +1,23 @@
+{
+  "name": "itunes-stat",
+  "version": "1.0.0",
+  "description": "iTunes Statistic",
+  "main": "main.js",
+  "scripts": {
+	"test": "echo \"Error: no test specified\" && exit 1",
+	"start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sideshow-systems/itunes-stat.git"
+  },
+  "author": "Florian Binder fb@sideshow-systems.de",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sideshow-systems/itunes-stat/issues"
+  },
+  "homepage": "https://github.com/sideshow-systems/itunes-stat#readme",
+  "devDependencies": {
+    "electron": "^5.0.2"
+  }
+}
