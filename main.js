@@ -28,12 +28,6 @@ function createWindow() {
 		// when you should delete the corresponding element.
 		mainWindow = null;
 	});
-
-	// const settingsBtn = document.getElementById('open-settings');
-	// settingsBtn.addEventListener('click', function (event) {
-	// 	console.log('settings button clicked');
-	// 	createSettingsWindow();
-	// })
 }
 
 // This method will be called when Electron has finished
@@ -56,31 +50,3 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
-
-
-// Settings window
-let settingsWin;
-
-function createSettingsWindow() {
-	settingsWin = new BrowserWindow({
-		width: 300,
-		height: 100,
-		webPreferences: {
-			nodeIntegration: true
-		}
-	});
-
-	// and load the index.html of the app.
-	settingsWin.loadFile('settings.html');
-
-	// Open the DevTools.
-	// settingsWin.webContents.openDevTools();
-
-	// Emitted when the window is closed.
-	settingsWin.on('closed', function () {
-		// Dereference the window object, usually you would store windows
-		// in an array if your app supports multi windows, this is the time
-		// when you should delete the corresponding element.
-		settingsWin = null;
-	});
-}
