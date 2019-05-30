@@ -1,0 +1,10 @@
+/** app styles **/
+
+// variables
+$app-background: rgb(11, 13, 36);
+$color-brightest: #fff;
+
+body {
+	background: $app-background;
+	color: $color-brightest;
+}
