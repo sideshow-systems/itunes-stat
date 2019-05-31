@@ -8,10 +8,10 @@ let settingsWin;
 
 function createSettingsWindow() {
 	settingsWin = new BrowserWindow({
-		width: 300,
-		height: 100,
-		frame: false,
-		alwaysOnTop: true,
+		width: 500,
+		height: 130,
+		// frame: false,
+		// alwaysOnTop: true,
 		webPreferences: {
 			nodeIntegration: true
 		}
@@ -21,7 +21,7 @@ function createSettingsWindow() {
 	settingsWin.loadFile('settings.html');
 
 	// Open the DevTools.
-	// settingsWin.webContents.openDevTools();
+	settingsWin.webContents.openDevTools();
 
 	// Emitted when the window is closed.
 	settingsWin.on('closed', function () {

@@ -7,10 +7,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Settings</title>
+	<style>@import 'src/styles/styles.css';</style>
 </head>
 
-<body>
-	<button id="close-settings">Close Settings</button>
+<body id="win-settings">
+	<button id="choose-itunes-lib" type="button" class="btn btn-outline-primary btn-block"><i class="fab fa-itunes-note"></i> Choose iTunes library XML file</button>
+	<button id="close-settings" type="button" class="btn btn-outline-primary btn-block"><i class="far fa-times-circle"></i> Close Settings</button>
 	<script>
 		// You can also require other files to run in this process
 		require('./settings.js')

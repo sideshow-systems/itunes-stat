@@ -1,10 +1,28 @@
-/** app styles **/
-
-// variables
-$app-background: rgb(11, 13, 36);
+/** variables **/
+$app-background: rgb(13, 26, 70);
+// $settings-background: scale-color($app-background, $lightness: 30%);
 $color-brightest: #fff;
 
+$fa-font-path: "../../node_modules/@fortawesome/fontawesome-free/webfonts";
+
+/** imports **/
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+/** app styles **/
 body {
 	background: $app-background;
 	color: $color-brightest;
+	padding: 10px;
+}
+
+
+
+
+/** window settings **/
+#win-settings {
+	// background: $settings-background;
 }
