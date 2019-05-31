@@ -1,5 +1,7 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require('electron');
+const xml2js = require('xml2js');
+const fs = require('fs');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -27,6 +29,25 @@ function createWindow() {
 		// in an array if your app supports multi windows, this is the time
 		// when you should delete the corresponding element.
 		mainWindow = null;
+	});
+
+	mainWindow.on('show', function () {
+		const filepath = 'data/itunes.xml';
+		console.log(filepath);
+		const parser = new xml2js.Parser();
+		fs.readFile(filepath, 'utf-8', (err, data) => {
+			if (err){
+				alert("An error ocurred reading the file :" + err.message);
+				return;
+			}
+			// console.log(data);
+
+			parser.parseString(data, function (err, result) {
+				console.dir(result);
+				// console.log(JSON.parse(JSON.stringify(result)));
+				console.log('Done');
+			});
+		});
 	});
 }
 

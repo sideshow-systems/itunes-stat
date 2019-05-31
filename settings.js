@@ -6,7 +6,6 @@ const fs = require('fs');
 
 const closeBtn = document.getElementById('close-settings');
 const openLibBtn = document.getElementById('choose-itunes-lib');
-console.log(openLibBtn);
 
 closeBtn.addEventListener('click', function (event) {
 	var window = remote.getCurrentWindow();
@@ -31,13 +30,16 @@ function showChooseDialog() {
 		console.log(filepath);
 
 		fs.readFile(filepath, 'utf-8', (err, data) => {
-			if(err){
+			if (err){
 				alert("An error ocurred reading the file :" + err.message);
 				return;
 			}
 
 			// Change how to handle the file content
-			console.log("The file content is : " + data);
+			// console.log("The file content is : " + data);
+			fs.writeFile('data/itunes.xml', data, function(err) {
+				console.log(err);
+			});
 		});
 	});
 }
