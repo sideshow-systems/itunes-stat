@@ -19,7 +19,7 @@
   "homepage": "https://github.com/sideshow-systems/itunes-stat#readme",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.8.2",
-    "electron": "^5.0.2"
+    "electron": "^15.5.5"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
